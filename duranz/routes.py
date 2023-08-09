@@ -43,7 +43,9 @@ def query_form():
 
 @app.route('/about')
 def about():
-    return render_template('about.html', title='About Duranz')
+    form = ProjectRequestForm()
+
+    return render_template('about.html', title='About Duranz',form=form)
 
 
 def mailed(recipients):

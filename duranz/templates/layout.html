@@ -38,13 +38,13 @@
             <a class="nav-link font-weight-bold" href="{{ url_for('home') }}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link font-weight-bold" href="{{ url_for('drone') }}">Drone</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link font-weight-bold" href="{{ url_for('project') }}">Projects</a>
+            <a class="nav-link font-weight-bold" href="{{ url_for('drone') }}">Project</a>
           </li>
           <li class="nav-item">
             <a class="nav-link font-weight-bold" href="{{ url_for('about') }}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-weight-bold" href="{{ url_for('query_form') }}">Contact</a>
           </li>
         </ul>
       </div>
@@ -63,7 +63,7 @@
       {% endwith %}
     </div>
   </div>
-  <div class="container">
+  <div class="">
     {% block content %} {% endblock %}
   </div>
   <!-- <footer class="container-fluid bg-dark fixed-bottom">
