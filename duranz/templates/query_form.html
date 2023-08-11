@@ -1,78 +1,18 @@
 {% extends "layout.html" %}
 {% block content %}
-<!-- <div class="container">
-<div class=" m-4 w-75">
-    <form method="post", enctype="multipart/form-data">
-        {{ form.csrf_token }}
-        <div class="form-group">
-                {{ form.name.label(class="form-control-label") }}
-                {% if form.name.errors %}
-                    {{ form.name(class="form-control form-control-lg is-invalid") }}
-                    <div class="invalid-feedback">
-                        {% for error in form.name.errors %}
-                            <span>{{ error }}</span>
-                        {% endfor %}
-                    </div>
-                {% else %}
-                    {{ form.name(class="form-control form-control-lg") }}
-                {% endif %}
-        </div>
-        <div class="form-group">
-                {{ form.email.label(class="form-control-label") }}
-                {% if form.email.errors %}
-                    {{ form.email(class="form-control form-control-lg is-invalid") }}
-                    <div class="invalid-feedback">
-                        {% for error in form.email.errors %}
-                            <span>{{ error }}</span>
-                        {% endfor %}
-                    </div>
-                {% else %}
-                    {{ form.email(class="form-control form-control-lg") }}
-                {% endif %}
-            </div>
-        <div class="form-group">
-                {{ form.project.label(class="form-control-label") }}
-                {% if form.project.errors %}
-                    {{ form.project(class="form-control form-control-lg is-invalid") }}
-                    <div class="invalid-feedback">
-                        {% for error in form.project.errors %}
-                            <span>{{ error }}</span>
-                        {% endfor %}
-                    </div>
-                {% else %}
-                    {{ form.project(class="form-control form-control-lg") }}
-                {% endif %}
-            </div>
-        <div class="form-group">
-                {{ form.detail.label(class="form-control-label") }}
-                {% if form.detail.errors %}
-                    {{ form.detail(class="form-control form-control-lg is-invalid", rows=7) }}
-                    <div class="invalid-feedback">
-                        {% for error in form.detail.errors %}
-                            <span>{{ error }}</span>
-                        {% endfor %}
-                    </div>
-                {% else %}
-                    {{ form.detail(class="form-control form-control-lg", rows=7) }}
-                {% endif %}
-            </div>
-                <div class="form-group">
-                    {{ form.sample_file.label() }}
-                    {{ form.sample_file(class="form-control-file") }}
-                    {% if form.sample_file.errors %}
-                        {% for error in form.sample_file.errors %}
-                            <span class="text-danger">{{ error }}</span></br>
-                        {% endfor %}
-                    {% endif %}
-                </div>
-        <div class="form-group">
-            {{ form.submit(class="btn btn-outline-info") }}
-        </div>
-    </form>
-</div>
-</div> -->
+<style>
+  .client-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
 
-
+  .client-logo img {
+    width: 80px;
+    height: 80px;
+  }
+</style>
 <div class="container py-4">
   <div class="row justify-content-center">
     <div class="col-12 col-lg-6">
@@ -89,7 +29,8 @@
         <img src="{{ url_for('static', filename='images/main1.png') }}" class="card-img-top" alt="...">
         <div class="card-body text-center">
           <hr>
-          <h4 class="card-title "><a class="text-secondary" href="https://prochartanalysis.com/"> ProChart Analysis</a></h4>
+          <h4 class="card-title "><a class="text-secondary" href="https://prochartanalysis.com/"> ProChart Analysis</a>
+          </h4>
         </div>
       </div>
     </div>
@@ -106,77 +47,16 @@
     <div class="col-12 col-lg-4 my-3">
       <div class="card h-100 shadow-lg bg-body">
         <img src="{{ url_for('static', filename='images/main3.png') }}" class="card-img-top" alt="...">
-        
+
         <div class="card-body text-center">
           <hr>
-          <h4 class="card-title"><a class="text-secondary" href="https://www.thearvindsharma.com/"> Arvind Sharma</a></h4>
+          <h4 class="card-title"><a class="text-secondary" href="https://www.thearvindsharma.com/"> Arvind Sharma</a>
+          </h4>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-<!-- <div class="container my-3">
-  <div class="row justify-content-center">
-    <div class="col-lg-6">
-      <div class="section-title text-center">
-        <h2 class="mb-4">Our Clients</h2>
-        <div class="divider mx-auto my-4"></div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-
-    <div class="col-lg-4 col-md-6 mb-3">
-      <div class="card shadow-lg bg-body">
-        <div class="row g-0">
-          <div class="col-4 px-2 d-flex align-items-center justify-content-center pl-3">
-            <img src="{{ url_for('static', filename='svg_images/favicon.ico') }}" class="card-img-top pt-1 w-75 h-75 "
-              alt="Upstox">
-          </div>
-          <div class="col-8">
-            <div class="card-body">
-              <h5 class="card-title"><a href="https://prochartanalysis.com/">ProChart Analysis</a></h5>
-              <p class="card-text">Analysis Website</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-6 mb-3">
-      <div class="card shadow-lg bg-body">
-        <div class="row g-0">
-          <div class="col-4 pt-2 pl-3">
-            <img src="{{ url_for('static', filename='svg_images/logo.png') }}" class="card-img-top pt-4" alt="Fyers">
-          </div>
-          <div class="col-8">
-            <div class="card-body">
-              <h5 class="card-title"><a href="https://www.tutorwhizai.com/">Tutor Whizai</a></h5>
-              <p class="card-text">website</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-6 mb-3">
-      <div class="card shadow-lg bg-body">
-        <div class="row g-0">
-          <div class="col-3 px-2 ">
-            <img src="{{ url_for('static', filename='svg_images/favi.png') }}" class="card-img-top pt-4 w-75 pl-2"
-              alt="Dhan">
-          </div>
-          <div class="col-8">
-            <div class="card-body">
-              <h5 class="card-title"><a href="https://www.thearvindsharma.com/">Arvind Sharma</a></h5>
-              <p class="card-text">Sport Website</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-   
-  </div>
-</div> -->
 
 <section class="section team">
   <div class="container">
@@ -189,35 +69,35 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-4 col-sm-4 col-md-2 my-2">
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
         <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/html.svg') }}" alt="Image"
             class="img-fluid" width="65" height="180"></a>
       </div>
-      <div class="col-4 col-sm-4 col-md-2 my-2">
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
         <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/css.svg') }}" alt="Image"
             class="img-fluid" width="65" height="65"></a>
       </div>
-      <div class="col-4 col-sm-4 col-md-2 my-2">
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
         <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/javascript.svg') }}"
             alt="Image" class="img-fluid" width="65" height="65"></a>
       </div>
-      <div class="col-4 col-sm-4 col-md-2 my-2">
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
         <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/python.svg') }}" alt="Image"
             class="img-fluid" width="65" height="65"></a>
       </div>
-     
-      <div class="col-4 col-sm-4 col-md-2 my-2">
+
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
         <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/node-js.svg') }}"
             alt="Image" class="img-fluid" width="65" height="65"></a>
       </div>
 
-   
-      <div class="col-4 col-sm-4 col-md-2 my-2">
+
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
         <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/gopher.svg') }}" alt="Image"
             class="img-fluid" width="55"></a>
       </div>
-      
-     
+
+
 
     </div>
     <div class="row justify-content-center">
@@ -232,119 +112,119 @@
 </section>
 <section class="section team">
   <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6">
-            <div class="section-title text-center">
-              <h2 class="mb-5 mt-3">Frameworks</h2>
-              <div class="divider mx-auto my-4"></div>
-            </div>
-          </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="section-title text-center">
+          <h2 class="mb-5 mt-3">Frameworks</h2>
+          <div class="divider mx-auto my-4"></div>
         </div>
- <div class="row">
-  
-  <div class="col-4 col-sm-4 col-md-2 my-2">
-    <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/flask.svg') }}" alt="Image"
-        class="img-fluid" width="100" height="100"></a>
-  </div>
-  <div class="col-4 col-sm-4 col-md-2 my-2">
-    <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/django.svg') }}" alt="Image"
-        class="img-fluid" width="100" height="100"></a>
-  </div>
-  <div class="col-4 col-sm-4 col-md-2 my-2">
-    <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/react-js.svg') }}"
-        alt="Image" class="img-fluid" width="75" height="75"></a>
-  </div>
-  <div class="col-4 col-sm-4 col-md-2 my-2">
-    <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/gin_go.svg') }}" alt="Image"
-        class="img-fluid" width="65" height="65"></a>
-  </div>
-
-  <div class="col-4 col-sm-4 col-md-2 my-2">
-    <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/react-native.svg') }}"
-        alt="Image" class="img-fluid" width="65" height="65"></a>
-  </div>
- 
- </div>
- <div class="row justify-content-center">
-  <div class="col-lg-6">
-    <div class="section-title text-center">
-      <hr>
-      <div class="divider mx-auto "></div>
+      </div>
     </div>
-  </div>
-</div>
+    <div class="row">
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
+        <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/flask.svg') }}" alt="Image"
+            class="img-fluid" width="100" height="100"></a>
+      </div>
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
+        <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/django.svg') }}" alt="Image"
+            class="img-fluid" width="100" height="100"></a>
+      </div>
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
+        <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/react-js.svg') }}"
+            alt="Image" class="img-fluid" width="65" height="65"></a>
+      </div>
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
+        <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/gin_go.svg') }}" alt="Image"
+            class="img-fluid" width="50" height="65"></a>
+      </div>
+
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
+        <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/react-native.svg') }}"
+            alt="Image" class="img-fluid" width="45" height="65"></a>
+      </div>
+
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="section-title text-center">
+          <hr>
+          <div class="divider mx-auto "></div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="section team my-5">
   <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6">
-            <div class="section-title text-center">
-              <h2 class="mb-5 ">Cloud Services</h2>
-              <div class="divider mx-auto my-4"></div>
-            </div>
-          </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="section-title text-center">
+          <h2 class="mb-5 ">Cloud Services</h2>
+          <div class="divider mx-auto my-4"></div>
         </div>
- <div class="row">
-  <div class="col-4 col-sm-4 col-md-2 my-2">
-    <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/docker.svg') }}" alt="Image"
-        class="img-fluid" width="80" height="80"></a>
-  </div>
-  <div class="col-4 col-sm-4 col-md-2 my-2">
-    <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/aws.svg') }}" alt="Image"
-        class="img-fluid" width="80" height="80"></a>
-  </div>
-
-
-
-  <div class="col-4 col-sm-4 col-md-2 my-2">
-    <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/google-cloud-icon.svg') }}"
-        alt="Image" class="img-fluid" width="80" height="80"></a>
-  </div>
- </div>
- <div class="row justify-content-center">
-  <div class="col-lg-6">
-    <div class="section-title text-center">
-      <hr>
-      <div class="divider mx-auto "></div>
+      </div>
     </div>
-  </div>
-</div>
+    <div class="row">
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
+        <a href="#" class="client-logo">
+          <img src="{{ url_for('static', filename='svg_images/docker.svg') }}" alt="Image" class="img-fluid">
+        </a>
+      </div>
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
+        <a href="#" class="client-logo">
+          <img src="{{ url_for('static', filename='svg_images/aws.svg') }}" alt="Image" class="img-fluid">
+        </a>
+      </div>
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
+        <a href="#" class="client-logo">
+          <img src="{{ url_for('static', filename='svg_images/google-cloud-icon.svg') }}" alt="Image" class="img-fluid">
+        </a>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="section-title text-center">
+          <hr>
+          <div class="divider mx-auto "></div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 <section class="section team my-5">
   <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6">
-            <div class="section-title text-center">
-              <h2 class="mb-5">Tools</h2>
-              <div class="divider mx-auto my-4"></div>
-            </div>
-          </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="section-title text-center">
+          <h2 class="mb-5">Tools</h2>
+          <div class="divider mx-auto my-4"></div>
         </div>
- <div class="row">
-  <div class="col-4 col-sm-4 col-md-2 my-2">
-    <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/visual-studio-code.svg') }}"
-        alt="Image" class="img-fluid" width="70" height="70"></a>
-  </div>
-  <div class="col-4 col-sm-4 col-md-2 my-2">
-    <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/git.svg') }}" alt="Image"
-        class="img-fluid" width="70" height="70"></a>
-  </div>
-  <div class="col-4 col-sm-4 col-md-2 my-2">
-    <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/postman.svg') }}"
-        alt="Image" class="img-fluid" width="70" height="70"></a>
-  </div>
- </div>
- <div class="row justify-content-center">
-  <div class="col-lg-6">
-    <div class="section-title text-center">
-      <hr>
-      <div class="divider mx-auto my-4"></div>
+      </div>
     </div>
-  </div>
-</div>
+    <div class="row">
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
+        <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/visual-studio-code.svg') }}"
+            alt="Image" class="img-fluid" width="70" height="70"></a>
+      </div>
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
+        <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/git.svg') }}" alt="Image"
+            class="img-fluid" width="70" height="70"></a>
+      </div>
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
+        <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/postman.svg') }}"
+            alt="Image" class="img-fluid" width="70" height="70"></a>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="section-title text-center">
+          <hr>
+          <div class="divider mx-auto my-4"></div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 {% endblock content %}

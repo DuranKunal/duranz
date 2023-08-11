@@ -1,7 +1,6 @@
 from flask_wtf import FlaskForm
-from flask_wtf.file import FileField, FileAllowed
-from wtforms import StringField, PasswordField,  SubmitField, TextAreaField, BooleanField
-from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
+from wtforms import StringField, SubmitField, TextAreaField
+from wtforms.validators import DataRequired, Email
     
     
 class ProjectRequestForm(FlaskForm):
@@ -9,6 +8,5 @@ class ProjectRequestForm(FlaskForm):
     email = StringField('Enter Email ID', validators=[Email(), DataRequired()])
     project = StringField('Type of Project', validators=[DataRequired()])
     detail = TextAreaField('Details of the Project', validators=[DataRequired()])
-    sample_file = FileField('Upload Sample Files')
     submit = SubmitField('Request')
 
