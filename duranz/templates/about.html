@@ -2,19 +2,23 @@
 
 {% block content %}
 <style>
-    .card-img-top {
-    width: 100%;
-    height: 70vh;
-    object-fit: cover;
-}
+    body{
+        overflow-x: hidden;
+    }
+    .team-card{
+        height: 100vh;
+    }
+    .img_team{
+        margin-right: 2vw;
+    }
+
 </style>
 <section>
     <div class="container-xxl pt-lg-5">
         <div class="row">
             <div class="col-lg-6">
                 <div class="position-relative h-100">
-                    <img class="img-fluid rounded" src="{{ url_for('static', filename='images/group_pic.jpg') }}" alt=""
-                        style="width: 100%;">
+                    <img class="img-fluid rounded" src="{{ url_for('static', filename='images/group_pic.jpg') }}" alt=""style="width: 100%;">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -137,39 +141,89 @@
         </div>
     </div>
 
-    <div class="d-flex align-items-center justify-content-center">
+    <!-- <div class="d-flex align-items-center justify-content-center">
         <div class="row align-items-center justify-content-center">
+            
             <div class="col-12 col-lg-3">
-                <div class="card team-block mb-5 mb-lg-0">
-                    <img src="{{ url_for('static', filename='images/kunal1.jpg') }}" alt="" class="card-img-top img-fluid rounded">
+                <div class="card team-block mb-5 mb-lg-0 team-card">
+                    <img src="{{ url_for('static', filename='images/kunal1.jpg') }}" alt="" class="card-img-top img-fluid w-100 team-images">
                     <div class="card-body">
                         <h4><a href="#" class="text-secondary">Kunal Duran</a></h4>
                         <p>CEO</p>
                     </div>
                 </div>
             </div>
+    
             <div class="col-12 col-lg-3">
-                <div class="card team-block mb-5 mb-lg-0">
-                    <img src="{{ url_for('static', filename='images/rahul.jpg') }}" alt="" class="card-img-top img-fluid rounded">
+                <div class="card team-block mb-5 mb-lg-0 team-card">
+                    <img src="{{ url_for('static', filename='images/rahul.jpg') }}" alt="" class="card-img-top img-fluid w-100 team-images">
                     <div class="card-body">
                         <h4><a href="#" class="text-secondary">Rahul Tak</a></h4>
                         <p>Software Developer</p>
                     </div>
                 </div>
             </div>
+    
             <div class="col-12 col-lg-3">
-                <div class="card team-block mb-5 mb-lg-0">
-                    <img src="{{ url_for('static', filename='images/peeyush.jpg') }}" alt="" class="card-img-top img-fluid rounded">
+                <div class="card team-block mb-5 mb-lg-0 team-card">
+                    <img src="{{ url_for('static', filename='images/peeyush.jpg') }}" alt="" class="card-img-top img-fluid w-100 team-images">
                     <div class="card-body">
                         <h4><a href="#" class="text-secondary">Peeyush Lakhesar</a></h4>
                         <p>Business Development Manager</p>
                     </div>
                 </div>
             </div>
+    
         </div>
-    </div>
+    </div> -->
     
 </section>
+
+<div class="container d-flex ">
+<div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col-12 col-lg-4">
+      <div class="card" style="height: 95%;">
+        <span style="height: 80%;">
+        <img src="{{ url_for('static', filename='images/kunal1.jpg') }}" class="card-img-top" style="height: 100%;" alt="...">
+    </span>
+        <div class="card-body">
+            <div class="text-center">
+            <h4><a href="#" class="text-secondary">Kunal Duran</a></h4>
+            <p>CEO</p>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-4">
+      <div class="card" style="height: 95%;">
+        <span style="height: 80%;">
+        <img src="{{ url_for('static', filename='images/rahul.jpg') }}" class="card-img-top" style="height: 100%;" alt="...">
+    </span>
+        <div class="card-body" style="padding-top: 5%;">
+            <div class="text-center">
+            <h4><a href="#" class="text-secondary">Rahul Tak</a></h4>
+            <p>Software Developer</p>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-4">
+      <div class="card" style="height: 95%;">
+        <span style="height: 80%;">
+        <img src="{{ url_for('static', filename='images/peeyush.jpg') }}" class="card-img-top" style="height: 100%;" alt="...">
+    </span>
+        <div class="card-body">
+            <div class="text-center">
+            <h4><a href="#" class="text-secondary">Peeyush Lakhesar</a></h4>
+            <p>Business Development Manager</p>
+        </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
 
 <div class="bg-secondary overflow-hidden my-5 px-lg-0" id="contact">
     <div class=" feature px-lg-0">

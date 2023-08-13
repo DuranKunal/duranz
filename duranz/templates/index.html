@@ -1,7 +1,20 @@
 {% extends "layout.html" %}
-
-
 {% block content %}
+
+<style>
+  .client-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .client-logo img {
+    width: 80px;
+    height: 80px;
+  }
+</style>
+
 <section class="jumbotron text-center">
   <div class="container">
     <h1 class="jumbotron-heading">Welcome to Duranz</h1>
@@ -16,7 +29,7 @@
       </p>
     </div>
     <div class="col-md-5">
-      <img class="featurette-image img-fluid mx-auto" src="https://img.freepik.com/free-photo/rear-view-programmer-working-all-night-long_1098-18697.jpg?w=996&t=st=1691399816~exp=1691400416~hmac=e0e57b0828b1317cf1748b11e35b5d50e78ffa81deb093990c741dd60533cb2d"
+      <img class="featurette-image img-fluid mx-auto" src="{{ url_for('static', filename='images/backend.avif') }}"
         data-src="holder.js/500x500/auto" alt="Generic placeholder image">
     </div>
   </div>
@@ -29,7 +42,7 @@
       <p class="lead"> We understand that every business has unique requirements. That's why we take a personalized approach to every project we undertake. We work closely with our clients to understand their specific needs and tailor our solutions accordingly. Whether you need a custom web application, an API integration, or a robust content management system, we've got you covered.</p>
     </div>
     <div class="col-md-5 order-md-1">
-      <img class="featurette-image img-fluid mx-auto" src="https://img.freepik.com/free-photo/configuration-operation-splution-system-icons-symbols_53876-133580.jpg?size=626&ext=jpg&uid=R56495885&ga=GA1.2.758818545.1690443804&semt=ais"
+      <img class="featurette-image img-fluid mx-auto" src="{{ url_for('static', filename='images/customer.webp') }}"
         data-src="#" alt="Generic placeholder image">
     </div>
   </div>
@@ -42,7 +55,7 @@
       <p class="lead">We believe that a successful web application should be scalable and performant. With our in-depth knowledge of backend technologies and best practices, we ensure that your software is designed and built to handle increasing user demand and deliver optimal performance even under high loads.</p>
     </div>
     <div class="col-md-5">
-      <img class="featurette-image img-fluid mx-auto" src="https://img.freepik.com/free-photo/data-development-performance-research-concept_53876-122764.jpg?w=826&t=st=1691400239~exp=1691400839~hmac=c9aef146cc1e600e971b2d2ef3c670e3bcc05329d6f6f3f44309e7b88effef0e"
+      <img class="featurette-image img-fluid mx-auto" src="{{ url_for('static', filename='images/performance.jpg') }}"
         data-src="holder.js/500x500/auto" alt="Generic placeholder image">
     </div>
   </div>
@@ -50,4 +63,219 @@
   <hr class="featurette-divider">
 
 </div>
+
+<div class="container py-4">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-6">
+      <div class="section-title text-center">
+        <h2 class="mb-4">Our Clients</h2>
+        <div class="divider mx-auto my-4"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col-12 col-lg-4 my-3">
+      <div class="card h-100 shadow-lg bg-body">
+        <img src="{{ url_for('static', filename='images/main1.png') }}" class="card-img-top" alt="...">
+        <div class="card-body text-center">
+          <hr>
+          <h4 class="card-title "><a class="text-secondary" href="https://prochartanalysis.com/" target="_blank"> ProChart Analysis</a>
+          </h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-4 my-3">
+      <div class="card h-100 shadow-lg bg-body">
+        <img src="{{ url_for('static', filename='images/main2.png') }}" class="card-img-top" alt="...">
+        <div class="card-body text-center">
+          <hr>
+          <h4 class="card-title"><a class="text-secondary" href="https://www.tutorwhizai.com/" target="_blank">Tutor Whizai</a></h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-4 my-3">
+      <div class="card h-100 shadow-lg bg-body">
+        <img src="{{ url_for('static', filename='images/main3.png') }}" class="card-img-top" alt="...">
+
+        <div class="card-body text-center">
+          <hr>
+          <h4 class="card-title"><a class="text-secondary" href="https://www.thearvindsharma.com/" target="_blank"> Arvind Sharma</a>
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="section team">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="section-title text-center">
+          <h2 class="mb-5 mt-3">Languages</h2>
+          <div class="divider mx-auto my-4"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
+        <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/html.svg') }}" alt="Image"
+            class="img-fluid" width="65" height="180"></a>
+      </div>
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
+        <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/css.svg') }}" alt="Image"
+            class="img-fluid" width="65" height="65"></a>
+      </div>
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
+        <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/javascript.svg') }}"
+            alt="Image" class="img-fluid" width="65" height="65"></a>
+      </div>
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
+        <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/python.svg') }}" alt="Image"
+            class="img-fluid" width="65" height="65"></a>
+      </div>
+
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
+        <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/node-js.svg') }}"
+            alt="Image" class="img-fluid" width="65" height="65"></a>
+      </div>
+
+
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
+        <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/gopher.svg') }}" alt="Image"
+            class="img-fluid" width="55"></a>
+      </div>
+
+
+
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="section-title text-center">
+          <hr>
+          <div class="divider mx-auto my-4"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section team">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="section-title text-center">
+          <h2 class="mb-5 mt-3">Frameworks</h2>
+          <div class="divider mx-auto my-4"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
+        <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/flask.svg') }}" alt="Image"
+            class="img-fluid" width="100" height="100"></a>
+      </div>
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
+        <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/django.svg') }}" alt="Image"
+            class="img-fluid" width="100" height="100"></a>
+      </div>
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
+        <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/react-js.svg') }}"
+            alt="Image" class="img-fluid" width="65" height="65"></a>
+      </div>
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
+        <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/gin_go.svg') }}" alt="Image"
+            class="img-fluid" width="50" height="65"></a>
+      </div>
+
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
+        <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/react-native.svg') }}"
+            alt="Image" class="img-fluid" width="45" height="65"></a>
+      </div>
+
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="section-title text-center">
+          <hr>
+          <div class="divider mx-auto "></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section team my-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="section-title text-center">
+          <h2 class="mb-5 ">Cloud Services</h2>
+          <div class="divider mx-auto my-4"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
+        <a href="#" class="client-logo">
+          <img src="{{ url_for('static', filename='svg_images/docker.svg') }}" alt="Image" class="img-fluid">
+        </a>
+      </div>
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
+        <a href="#" class="client-logo">
+          <img src="{{ url_for('static', filename='svg_images/aws.svg') }}" alt="Image" class="img-fluid">
+        </a>
+      </div>
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
+        <a href="#" class="client-logo">
+          <img src="{{ url_for('static', filename='svg_images/google-cloud-icon.svg') }}" alt="Image" class="img-fluid">
+        </a>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="section-title text-center">
+          <hr>
+          <div class="divider mx-auto "></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section team my-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="section-title text-center">
+          <h2 class="mb-5">Tools</h2>
+          <div class="divider mx-auto my-4"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
+        <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/visual-studio-code.svg') }}"
+            alt="Image" class="img-fluid" width="70" height="70"></a>
+      </div>
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
+        <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/git.svg') }}" alt="Image"
+            class="img-fluid" width="70" height="70"></a>
+      </div>
+      <div class="col-4 col-sm-4 col-md-2 my-2 client-logo-container">
+        <a href="#" class="client-logo"><img src="{{ url_for('static', filename='svg_images/postman.svg') }}"
+            alt="Image" class="img-fluid" width="70" height="70"></a>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="section-title text-center">
+          <hr>
+          <div class="divider mx-auto my-4"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 {% endblock %}
