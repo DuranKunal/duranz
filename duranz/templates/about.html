@@ -1,7 +1,13 @@
 {% extends "layout.html" %}
 
 {% block content %}
-
+<style>
+    .card-img-top {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+}
+</style>
 <section>
     <div class="container-xxl pt-lg-5">
         <div class="row">
@@ -133,40 +139,33 @@
 
     <div class="d-flex align-items-center justify-content-center">
         <div class="row align-items-center justify-content-center">
-            
-            <!-- First Column -->
             <div class="col-12 col-lg-3">
                 <div class="card team-block mb-5 mb-lg-0">
-                    <img src="{{ url_for('static', filename='images/kunal1.jpg') }}" alt="" class="card-img-top img-fluid w-100">
+                    <img src="{{ url_for('static', filename='images/kunal1.jpg') }}" alt="" class="card-img-top img-fluid rounded">
                     <div class="card-body">
                         <h4><a href="#" class="text-secondary">Kunal Duran</a></h4>
                         <p>CEO</p>
                     </div>
                 </div>
             </div>
-    
-            <!-- Second Column -->
             <div class="col-12 col-lg-3">
                 <div class="card team-block mb-5 mb-lg-0">
-                    <img src="{{ url_for('static', filename='images/rahul.jpg') }}" alt="" class="card-img-top img-fluid w-100">
+                    <img src="{{ url_for('static', filename='images/rahul.jpg') }}" alt="" class="card-img-top img-fluid rounded">
                     <div class="card-body">
                         <h4><a href="#" class="text-secondary">Rahul Tak</a></h4>
                         <p>Software Developer</p>
                     </div>
                 </div>
             </div>
-    
-            <!-- Third Column -->
             <div class="col-12 col-lg-3">
                 <div class="card team-block mb-5 mb-lg-0">
-                    <img src="{{ url_for('static', filename='images/peeyush.jpg') }}" alt="" class="card-img-top img-fluid w-100">
+                    <img src="{{ url_for('static', filename='images/peeyush.jpg') }}" alt="" class="card-img-top img-fluid rounded">
                     <div class="card-body">
                         <h4><a href="#" class="text-secondary">Peeyush Lakhesar</a></h4>
                         <p>Business Development Manager</p>
                     </div>
                 </div>
             </div>
-    
         </div>
     </div>
     
