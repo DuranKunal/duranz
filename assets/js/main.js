@@ -1,10 +1,4 @@
-/**
-* Template Name: FlexStart
-* Updated: Sep 18 2023 with Bootstrap v5.3.2
-* Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 (function() {
   "use strict";
 
@@ -330,3 +324,37 @@ const typeEffect = () => {
 }
 
 typeEffect();
+
+
+const dynamicTextone = document.querySelector(".firstline span");
+const words1 = ["Custom Web Solutions", "E-commerce Solutions", "Progressive web apps", "Web Designing","Backend Architecture","Website Development"];
+
+// Variables to track the position and deletion status of the word
+let wordIndex1 = 0;
+let charIndex1 = 0;
+let isDeleting1 = false;
+
+const firstline = () => {
+    const currentWord = words1[wordIndex1];
+    const currentChar = currentWord.substring(0, charIndex1);
+    dynamicTextone.textContent = currentChar;
+    dynamicTextone.classList.add("stop-blinking");
+
+    if (!isDeleting && charIndex1 < currentWord.length) {
+        // If condition is true, type the next character
+        charIndex++;
+        setTimeout(typeEffect, 80);
+    } else if (isDeleting && charIndex1 > 0) {
+        // If condition is true, remove the previous character
+        charIndex1--;
+        setTimeout(typeEffect, 60);
+    } else {
+        // If word is deleted then switch to the next word
+        isDeleting = !isDeleting;
+        dynamicTextone.classList.remove("stop-blinking");
+        wordIndex1 = !isDeleting ? (wordIndex1 + 1) % words1.length : wordIndex1;
+        setTimeout(typeEffect, 700);
+    }
+}
+
+firstline();
